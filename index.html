@@ -5,17 +5,304 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fenerbahçe</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
     <script src="js/main.js" defer></script>
   </head>
   <body>
+    <div id="intro">
+      <img class="intro-logo" src="images/logo.svg" alt="" />
+      <p class="intro-yazi">1907</p>
+    </div>
     <section id="hero">
-      <img src="images/stadyum.jpg" alt="Şükrü Saraçoğlu Stadyumu" />
+      <img src="images/stadyum.jpg" alt="Şükrü Saracoğlu Stadyumu" />
       <h1>Fenerbahçe Spor Kulübü</h1>
+      <div class="hero-overlay"></div>
     </section>
-    <section id="tarihce"><h2>Tarihçe</h2></section>
-    <section id="kupalar"><h2>Kupalar</h2></section>
-    <section id="efsaneler"><h2>Efsaneler</h2></section>
-    <section id="kadro"><h2>Güncel Kadro</h2></section>
-    <footer><p>Resmi olmayan taraftar sitesi</p></footer>
+
+    <section id="tarihce">
+      <h2>Tarihçe</h2>
+      <img class="logo" src="images/logo.svg" alt="Fenerbahçe logosu" />
+      <ul class="timeline">
+        <li class="olay">
+          <span class="yil">1907</span>
+          <p>Fenerbahçe Spor Kulübü Kadıköy'de kuruldu.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">1908</span>
+          <p>Yeni yasayla kulüp resmen tescil edildi.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">1911-12</span>
+          <p>İstanbul Ligi'nde hiç yenilmeden ilk şampiyonluk.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">1918</span>
+          <p>Mustafa Kemal Atatürk kulübü ziyaret etti.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">1934-50</span>
+          <p>Şükrü Saracoğlu kulüp başkanlığı yaptı.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">1959</span>
+          <p>İlk Türkiye ulusal ligi şampiyonu Fenerbahçe oldu.</p>
+          <figure class="oyuncu sol">
+            <img src="images/lefter.png" alt="Lefter Küçükandonyadis" />
+            <figcaption>Lefter Küçükandonyadis</figcaption>
+          </figure>
+        </li>
+        <li class="olay">
+          <span class="yil">1967</span>
+          <p>Balkan Kupası: Türk kulüplerinin ilk uluslararası kupası.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">1998</span>
+          <p>Stadyum, Şükrü Saracoğlu adını aldı.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">1999-2006</span>
+          <p>Stadyum yeniden inşa edildi.</p>
+        </li>
+        <li class="olay">
+          <span class="yil">2008</span>
+          <p>Şampiyonlar Ligi'nde çeyrek final.</p>
+          <figure class="oyuncu sag">
+            <img src="images/alex.png" alt="Alex de Souza" />
+            <figcaption>Alex de Souza</figcaption>
+          </figure>
+        </li>
+        <li class="olay">
+          <span class="yil">2013</span>
+          <p>Avrupa Ligi'nde yarı final.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="kupalar">
+      <h2>Kupalar</h2>
+      <div class="kupa-ikon">🏆</div>
+      <ul class="kupa-listesi">
+        <li class="kupa onemli">
+          <span class="sayi" data-hedef="19">0</span>
+          <span class="kupa-ad">Süper Lig</span>
+        </li>
+        <li class="kupa onemli">
+          <span class="sayi" data-hedef="28">0</span>
+          <span class="kupa-ad">Millî Şampiyonluk</span>
+        </li>
+        <li class="kupa onemli">
+          <span class="sayi" data-hedef="7">0</span>
+          <span class="kupa-ad">Türkiye Kupası</span>
+        </li>
+        <li class="kupa">
+          <span class="sayi" data-hedef="1">0</span>
+          <span class="kupa-ad">Balkan Kupası (1966-67)</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="efsaneler">
+      <video
+        class="efsane-video"
+        src="videos/efsaneler.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+      <h2>Efsaneler</h2>
+      <ul class="efsane-listesi">
+        <li class="efsane">
+          <img
+            src="images/zeki.png"
+            alt="Zeki Rıza Sporel"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Zeki Rıza Sporel</h3>
+          <p class="donem">1916-1934</p>
+          <p>352 maçta 470 gol: kulübün tüm zamanların en golcü ismi.</p>
+        </li>
+        <li class="efsane">
+          <img
+            src="images/lefter.png"
+            alt="Lefter Küçükandonyadis"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Lefter Küçükandonyadis</h3>
+          <p class="donem">1947-1951, 1953-1964</p>
+          <p>615 maçta 423 gol. Avrupa'da oynayan ilk Türk futbolcularından.</p>
+        </li>
+        <li class="efsane">
+          <img
+            src="images/bartu.png"
+            alt="Can Bartu"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Can Bartu</h3>
+          <p class="donem">1955-1961, 1967-1970</p>
+          <p>
+            372 maçta 181 gol. Futbola Fenerbahçe'de başladı ve burada bıraktı.
+          </p>
+        </li>
+        <li class="efsane">
+          <img
+            src="images/cemil.png"
+            alt="Cemil Turan"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Cemil Turan</h3>
+          <p class="donem">1972-1981</p>
+          <p>1970'lerin şampiyonluk yıllarında üç kez gol kralı oldu.</p>
+        </li>
+        <li class="efsane">
+          <img
+            src="images/aykut.png"
+            alt="Aykut Kocaman"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Aykut Kocaman</h3>
+          <p class="donem">1988-1996</p>
+          <p>1988-89'da 29 golle bir sezonda en çok gol rekorunu elde etti.</p>
+        </li>
+        <li class="efsane">
+          <img
+            src="images/müjdat.png"
+            alt="Müjdat Yetkiner"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Müjdat Yetkiner</h3>
+          <p class="donem">1979-1996</p>
+          <p>
+            Kariyerini tamamen Fenerbahçe'de geçirdi, en çok forma giyen oyuncu.
+          </p>
+        </li>
+        <li class="efsane">
+          <img
+            src="images/rencber.png"
+            alt="Rüştü Reçber"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Rüştü Reçber</h3>
+          <p class="donem">1994-2003, 2004-2007</p>
+          <p>2002 Dünya Kupası'nda turnuvanın en iyi kadrosuna seçildi.</p>
+        </li>
+        <li class="efsane">
+          <img
+            src="images/alex.png"
+            alt="Alex de Souza"
+            onerror="this.style.display = 'none'"
+          />
+          <h3>Alex de Souza</h3>
+          <p class="donem">2004-2013</p>
+          <p>
+            Kulübün simgesi, Fenerbahçe'nin en çok gol atan yabancı oyuncusu.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="kadro">
+      <h2>Güncel Kadro</h2>
+      <p class="kadro-not">2026-27 sezonu</p>
+
+      <div class="kadro-grup">
+        <h3>Kaleciler</h3>
+        <ul class="futbolcu-listesi">
+          <li class="futbolcu">
+            <span class="no">31</span><span class="isim">Ederson</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">34</span><span class="isim">Mert Günok</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">13</span><span class="isim">Tarık Çetin</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="kadro-grup">
+        <h3>Defans</h3>
+        <ul class="futbolcu-listesi">
+          <li class="futbolcu">
+            <span class="no">37</span><span class="isim">Milan Škriniar</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">22</span><span class="isim">Levent Mercan</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">DF</span><span class="isim">Nathan Aké</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">DF</span><span class="isim">Archie Brown</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="kadro-grup">
+        <h3>Orta Saha</h3>
+        <ul class="futbolcu-listesi">
+          <li class="futbolcu">
+            <span class="no">5</span><span class="isim">İsmail Yüksek</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">6</span><span class="isim">Mattéo Guendouzi</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">8</span><span class="isim">Mert Hakan Yandaş</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">10</span><span class="isim">Marco Asensio</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">17</span
+            ><span class="isim">İrfan Can Kahveci</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">28</span><span class="isim">Bartuğ Elmaz</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">70</span><span class="isim">Oğuz Aydın</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">91</span><span class="isim">N'Golo Kanté</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="kadro-grup">
+        <h3>Forvet</h3>
+        <ul class="futbolcu-listesi">
+          <li class="futbolcu">
+            <span class="no">FW</span><span class="isim">Kerem Aktürkoğlu</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">FW</span><span class="isim">Vedat Muriqi</span>
+          </li>
+          <li class="futbolcu">
+            <span class="no">FW</span><span class="isim">Mason Greenwood</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer>
+      <footer>
+        <p>Resmi olmayan taraftar sitesidir.</p>
+        <p class="kredi">
+          Stadyum fotoğrafı: Sakhalinio, CC BY-SA 4.0, Wikimedia Commons.<br />
+          Lefter fotoğrafı: Fenerbahçe Dergisi (1948), Kamu Malı, Wikimedia
+          Commons.<br />
+          Alex fotoğrafı: LİSANS, Wikimedia Commons.<br />
+          Efsane fotoğrafları: LİSANS, Wikimedia Commons.<br />
+          Logo: Wikimedia Commons.<br />
+        </p>
+      </footer>
+    </footer>
   </body>
 </html>

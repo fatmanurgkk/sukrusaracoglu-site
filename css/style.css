@@ -14,20 +14,18 @@ section {
   min-height: 100vh;
 }
 
-#hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 h1,
 h2 {
   color: #ffed00;
 }
+
 #hero {
   position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 #hero img {
@@ -44,4 +42,313 @@ h2 {
   position: relative;
   z-index: 1;
   font-size: 4rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: #001a3d;
+  opacity: 0;
+  z-index: 2;
+}
+
+#tarihce {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.logo {
+  width: 160px;
+  margin: 2rem 0;
+}
+
+.timeline {
+  list-style: none;
+  max-width: 600px;
+  border-left: 3px solid #ffed00;
+  padding-left: 2rem;
+}
+
+.olay {
+  margin-bottom: 3rem;
+}
+
+.yil {
+  color: #ffed00;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+#tarihce {
+  position: relative;
+  overflow-x: clip;
+}
+
+.olay {
+  position: relative;
+}
+
+.olay .yil,
+.olay p {
+  position: relative;
+  z-index: 1;
+}
+
+.oyuncu {
+  position: absolute;
+  top: 50%;
+  height: 90vh;
+  margin-top: -45vh;
+  opacity: 0.35;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.oyuncu.sol {
+  right: calc(100% + 4rem);
+}
+
+.oyuncu.sag {
+  left: 60%;
+}
+
+.oyuncu img {
+  height: 100%;
+  width: auto;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 25%,
+    black 75%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 25%,
+    black 75%,
+    transparent
+  );
+}
+
+.oyuncu figcaption {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .oyuncu {
+    height: 50vh;
+    margin-top: -25vh;
+    opacity: 0.25;
+  }
+}
+#kupalar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.kupa-ikon {
+  font-size: 8rem;
+  margin: 2rem 0;
+}
+
+.kupa-listesi {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.kupa {
+  border: 2px solid #ffed00;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+}
+
+.kupa.onemli {
+  background: rgba(255, 237, 0, 0.08);
+}
+
+.sayi {
+  display: block;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffed00;
+}
+
+.kupa-ad {
+  font-size: 1.1rem;
+}
+
+.kupa.onemli .kupa-ad {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#intro {
+  position: fixed;
+  inset: 0;
+  background: #001a3d;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.intro-logo {
+  width: 180px;
+}
+
+.intro-yazi {
+  color: #ffed00;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5em;
+  padding-left: 0.5em;
+}
+#efsaneler {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.efsane-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#efsaneler > h2,
+.efsane-listesi {
+  position: relative;
+  z-index: 1;
+}
+
+.efsane-listesi {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  margin-top: 2rem;
+}
+
+.efsane {
+  background: rgba(0, 26, 61, 0.75);
+  border: 1px solid #ffed00;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.efsane img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+  border: 3px solid #ffed00;
+  margin-bottom: 1rem;
+}
+
+.efsane h3 {
+  color: #ffed00;
+  font-size: 1.3rem;
+}
+
+.efsane .donem {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0.25rem 0 0.75rem;
+}
+#kadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.kadro-not {
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+
+.kadro-grup {
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 2.5rem;
+}
+
+.kadro-grup h3 {
+  color: #ffed00;
+  border-bottom: 2px solid #ffed00;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.futbolcu-listesi {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.futbolcu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid #ffed00;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.futbolcu:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 237, 0, 0.15);
+}
+
+.futbolcu .no {
+  min-width: 2.6rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffed00;
+}
+
+.futbolcu .isim {
+  font-size: 1.05rem;
+}
+footer .kredi {
+  font-size: 0.8rem;
+  opacity: 0.2;
+  line-height: 1.6;
+  margin-top: 0.5rem;
 }
