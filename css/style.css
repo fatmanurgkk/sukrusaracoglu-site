@@ -352,3 +352,27 @@ footer .kredi {
   line-height: 1.6;
   margin-top: 0.5rem;
 }
+nav {
+  background-color: #0a1f44;
+  padding: 15px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: white;
+}
