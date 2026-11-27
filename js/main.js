@@ -1,3 +1,9 @@
+const menuButon = document.getElementById("menuButon");
+const menu = document.getElementById("menu");
+
+menuButon.addEventListener("click", function () {
+  menu.classList.toggle("acik");
+});
 gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline({
@@ -119,10 +125,4 @@ gsap.utils.toArray(".kadro-grup").forEach((grup) => {
     stagger: 0.1,
     scrollTrigger: { trigger: grup, start: "top 85%" },
   });
-});
-const menuButon = document.getElementById("menuButon");
-const menu = document.getElementById("menu");
-
-menuButon.addEventListener("click", function () {
-  menu.classList.toggle("acik");
 });
