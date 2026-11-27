@@ -120,3 +120,9 @@ gsap.utils.toArray(".kadro-grup").forEach((grup) => {
     scrollTrigger: { trigger: grup, start: "top 85%" },
   });
 });
+const menuButon = document.getElementById("menuButon");
+const menu = document.getElementById("menu");
+
+menuButon.addEventListener("click", function () {
+  menu.classList.toggle("acik");
+});
